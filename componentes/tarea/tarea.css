@@ -1,0 +1,27 @@
+.tarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f0f0;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.tarea span {
+  flex: 1;
+}
+
+.btn-eliminar {
+  background: rgb(255, 0, 51);
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-eliminar:hover {
+  background: rgb(255, 255, 255);
+}
