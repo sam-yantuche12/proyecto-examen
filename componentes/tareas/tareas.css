@@ -1,3 +1,5 @@
-.tareas{
-   margin-top: 20px;
+.tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

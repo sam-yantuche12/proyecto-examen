@@ -1,11 +1,16 @@
-import { obtenerTareas } from "../../Control/miLocalStorage.js";
-import { crearTarea } from "../Tarea/tarea.js";
+import { miLocalStorage } from "../../control/miLocalStorage.js";
+import { crearTareaElemento } from "../tarea/tarea.js";
 
-export function mostrarTareas(contenedor) {
-  contenedor.innerHTML = "";
-  const tareas = obtenerTareas();
+export function renderTareas() {
+  const tareasSection = document.getElementById("tareas");
+  tareasSection.innerHTML = "";
 
-  tareas.forEach((tarea, index) => {
-    contenedor.appendChild(crearTarea(tarea, index));
+  const tareas = miLocalStorage.obtenerTareas();
+
+  tareas.forEach((tarea) => {
+    const tareaDiv = crearTareaElemento(tarea, (t) => {
+      miLocalStorage.eliminarTarea(t);
+    });
+    tareasSection.appendChild(tareaDiv);
   });
 }

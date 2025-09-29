@@ -1,14 +1,7 @@
 import { crearFormulario } from "./componentes/formulario/formulario.js";
-import { mostrarTareas } from "./componentes/tareas/tareas.js";
+import { renderTareas } from "./componentes/tareas/tareas.js";
+import { miLocalStorage } from "./control/miLocalStorage.js";
 
-const app = document.querySelector("#app");
-
-
-const contenedorTareas = document.createElement("div");
-
-
-app.appendChild(crearFormulario(contenedortareas));
-app.appendChild(contenedortareas);
-
-
-mostrarTareas(contenedortareas);
+// Inicializamos la aplicación
+crearFormulario();
+renderTareas();

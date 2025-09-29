@@ -1,27 +1,26 @@
-const app = document.getElementById("app");
+import { miLocalStorage } from "../../control/miLocalStorage.js";
+import { renderTareas } from "../tareas/tareas.js";
 
-// Crear contenedor
-const formContainer = document.createElement("div");
-formContainer.classList.add("formulario");
+export function crearFormulario() {
+  const formularioSection = document.getElementById("formulario");
+  formularioSection.innerHTML = "";
 
-// Input
-const input = document.createElement("input");
-input.type = "text";
-input.placeholder = "Nombre de la tarea";
+  const form = document.createElement("form");
+  form.innerHTML = `
+    <input type="text" id="tareaInput" placeholder="Escribe tu tarea">
+    <button type="submit">Agregar</button>
+  `;
 
-// Botón
-const btnAgregar = document.createElement("button");
-btnAgregar.textContent = "Agregar";
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = document.getElementById("tareaInput");
+    const valor = input.value.trim();
+    if (valor !== "") {
+      miLocalStorage.agregarTarea(valor);
+      input.value = "";
+      renderTareas();
+    }
+  });
 
-// Agregar al contenedor
-formContainer.appendChild(input);
-formContainer.appendChild(btnAgregar);
-app.appendChild(formContainer);
-
-// Evento para agregar tarea
-btnAgregar.addEventListener("click", () => {
-if(input.value.trim() !== ""){
-agregarTarea(input.value);
-input.value = "";
+  formularioSection.appendChild(form);
 }
-});

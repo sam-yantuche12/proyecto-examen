@@ -1,23 +1,23 @@
-
 .formulario {
-display: flex;
-gap: 5px;
-margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .formulario input {
-flex: 1;
-padding: 5px;
+  flex: 1;
+  padding: 8px;
 }
 
 .formulario button {
-padding: 5px 10px;
-background: #4CAF50;
-color: white;
-border: none;
-cursor: pointer;
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .formulario button:hover {
-background: #45a049;
+  background: #218838;
 }

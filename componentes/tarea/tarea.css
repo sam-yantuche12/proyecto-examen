@@ -2,26 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f0f0f0;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-.tarea span {
-  flex: 1;
+.tarea input[type="checkbox"] {
+  margin-right: 10px;
 }
 
-.btn-eliminar {
-  background: rgb(255, 0, 51);
+.tarea button {
   border: none;
-  color: white;
-  padding: 5px 8px;
-  border-radius: 6px;
+  background: transparent;
+  color: red;
   cursor: pointer;
-  margin-left: 10px;
-}
-
-.btn-eliminar:hover {
-  background: rgb(255, 255, 255);
 }

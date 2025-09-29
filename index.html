@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examen</title>
-    <link rel="stylesheet" href="config.css">
-    <link rel="stylesheet" href="Componentes/Tarea/tarea.css">
-    <link rel="stylesheet" href="Componentes/tareas/tareas.css">
-    <link rel="stylesheet" href="Componentes/formulario/formulario.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="config.css">
+  <link rel="stylesheet" href="componentes/formulario/formulario.css">
+  <link rel="stylesheet" href="componentes/tarea/tarea.css">
+  <link rel="stylesheet" href="componentes/tareas/tareas.css">
 </head>
 <body>
-   <body>
-   <div id="app"></div>
-   <script src="main.js" type="module"></script> 
-</body>
+  <main>
+    <!-- Formulario para agregar tarea -->
+    <section id="formulario"></section>
 
+    <!-- Lista de tareas -->
+    <section id="tareas"></section>
+  </main>
+
+  <!-- Solo se carga main.js como módulo -->
+  <script type="module" src="main.js"></script>
 </body>
 </html>
